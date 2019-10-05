@@ -9,13 +9,14 @@ class FinancialCrashes::CLI
 
 
   def list_crashes
-    puts <<-DOC.gsub /^\s*/, ''
-    1.crash1
-    2.crash2
-    3.crash3
-    4.crash4
-    5.crash5
-    DOC
+    # puts <<-DOC.gsub /^\s*/, ''
+    # 1.crash1
+    # 2.crash2
+    # 3.crash3
+    # 4.crash4
+    # 5.crash5
+    # DOC
+    @Crashes = FinancialCrashes::Crash.today
   end
 
   def menu
