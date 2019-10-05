@@ -17,7 +17,7 @@ class FinancialCrashes::CLI
     # 5.crash5
     # DOC
     @Crashes = FinancialCrashes::Crash.now
-    @Crashes.each.with_index(1) do |crash, i|
+    @Crashes.uniq.each.with_index(1) do |crash, i|
       puts "#{i}. #{crash.name}"
     end
   end
