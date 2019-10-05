@@ -3,6 +3,7 @@ class FinancialCrashes::CLI
   def call
     puts "Welcome, History repeats itself so learn about Financial Nightmare's."
     list_crashes
+    menu
   end
 
 
@@ -14,5 +15,9 @@ class FinancialCrashes::CLI
     4.crash4
     5.crash5
     DOC
+  end
+
+  def menu
+    puts "what would you like to learn about today?"
   end
 end
