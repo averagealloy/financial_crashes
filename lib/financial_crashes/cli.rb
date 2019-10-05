@@ -4,6 +4,7 @@ class FinancialCrashes::CLI
     puts "Welcome, History repeats itself so learn about Financial Nightmare's."
     list_crashes
     menu
+    goodbye
   end
 
 
@@ -18,8 +19,10 @@ class FinancialCrashes::CLI
   end
 
   def menu
-    puts "what would you like to learn about today?"
-    input = gets.strip
+    input = nil
+    while input != "exit"
+      puts "what would you like to learn about today? or type exit to leave the program!"
+    input = gets.strip.downcase
     case input
     when "1"
       puts "You have selected A crash here is more about it.
@@ -46,6 +49,10 @@ class FinancialCrashes::CLI
     EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
     ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
     zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-  end 
+      end
+    end
+  end
+  def goodbye
+    puts "I hope you have learned as much as I did making this project have a good day!"
   end
 end
