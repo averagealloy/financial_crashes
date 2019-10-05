@@ -51,6 +51,8 @@ class FinancialCrashes::CLI
     zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
   when "list"
     list_crashes
+  else
+      puts "I can't find that crash. try typing list to see the list of crashes again"
       end
     end
   end
