@@ -19,7 +19,7 @@ class FinancialCrashes::CLI
     @Crashes = FinancialCrashes::Crash.today
     @Crashes.each.with_index(1) do |crash, i|
       puts "#{i}. #{crash}"
-    end 
+    end
   end
 
   def menu
@@ -30,7 +30,7 @@ class FinancialCrashes::CLI
       input = gets.strip.downcase
       if input.to_i > 0
         puts @Crashes[input.to_i-1]
-      elsif input == list
+      elsif input == "crashes"
         list_crashes
       else
       puts "I can't find that crash. try typing list to see the list of crashes again"
