@@ -21,7 +21,7 @@ class FinancialCrashes::CLI
   def menu
     input = nil
     while input != "exit"
-      puts "what would you like to learn about today? or type exit to leave the program!"
+      puts "what would you like to learn about today?,to see the crashes again type list! or to leave the program type exit: "
     input = gets.strip.downcase
     case input
     when "1"
@@ -49,6 +49,8 @@ class FinancialCrashes::CLI
     EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
     ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
     zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+  when "list"
+    list_crashes
       end
     end
   end
