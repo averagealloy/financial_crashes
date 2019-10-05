@@ -1,6 +1,5 @@
-require "financial_crashes/version"
+require_relative "./financial_crashes/version"
 
-module FinancialCrashes
-  class Error < StandardError; end
-  # Your code goes here...
-end
+
+
+require_relative './financial_crashes/cli'

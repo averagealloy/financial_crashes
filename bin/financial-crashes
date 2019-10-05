@@ -1,2 +1,5 @@
 #!/usr/bin/env ruby
+
+require './lib/financial_crashes'
+
 FinancialCrashes::CLI.new.call

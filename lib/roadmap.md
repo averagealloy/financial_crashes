@@ -1,7 +1,7 @@
 cli
 
 
-"Welcome History repeats itself so learn about Financial Nightmare's "
+"Welcome, History repeats itself so learn about Financial Nightmare's."
 
 "what would you like to learn about today?"
 user types a number representing an financial crash
