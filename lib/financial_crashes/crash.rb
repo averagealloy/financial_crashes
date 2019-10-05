@@ -1,4 +1,5 @@
 class FinancialCrashes::Crash
+attr_accessor :name, :blurb, :url 
 
 def self.today
   #should return instances of  crash
@@ -45,12 +46,13 @@ def self.today
 
   crash_5 = self.new
   crash_5.name = "crash5"
-  crash_4.blurb = "You have selected E crash here is more about it.
+  crash_5.blurb = "You have selected E crash here is more about it.
   EZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
   ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
   zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
   crash_5.url = "https://www.thegentlemansjournal.com/five-worst-financial-crashes-time/"
 
+  [crash_1, crash_2, crash_3, crash_4, crash_5]
   end
 
 end
