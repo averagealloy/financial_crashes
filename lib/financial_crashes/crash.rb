@@ -1,7 +1,17 @@
 class FinancialCrashes::Crash
 attr_accessor :name, :blurb, :url
+@@all = []
+def initialize
+ @@all << self
+end
 
-def self.today
+def self.all
+@@all
+end
+
+
+def self.now
+
   #should return instances of  crash
 
   # puts <<-DOC.gsub /^\s*/, ''
@@ -52,7 +62,9 @@ def self.today
   zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
   crash_5.url = "https://www.thegentlemansjournal.com/five-worst-financial-crashes-time/"
 
-  [crash_1, crash_2, crash_3, crash_4, crash_5]
-  end
+  #[crash_1, crash_2, crash_3, crash_4, crash_5]
+@@all
+
+end
 
 end
