@@ -18,7 +18,7 @@ class FinancialCrashes::CLI
     # DOC
     @Crashes = FinancialCrashes::Crash.today
     @Crashes.each.with_index(1) do |crash, i|
-      puts "#{i}. #{crash}"
+      puts "#{i}. #{crash.name}"
     end
   end
 
@@ -28,8 +28,10 @@ class FinancialCrashes::CLI
       puts "what would you like to learn about today?,to see the crashes again type list! or to leave the program type exit: "
 
       input = gets.strip.downcase
+
       if input.to_i > 0
-        puts @Crashes[input.to_i-1]
+        the_crash = @Crashes[input.to_i-1]
+        puts "#{the_crash.blurb}"
       elsif input == "crashes"
         list_crashes
       else
