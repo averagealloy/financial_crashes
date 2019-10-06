@@ -17,7 +17,7 @@ class FinancialCrashes::CLI
     # 5.crash5
     # DOC
     @Crashes = FinancialCrashes::Crash.now
-    @Crashes.uniq.each.with_index(1) do |crash, i|
+    @Crashes.each.with_index(1) do |crash, i|
       puts "#{i}. #{crash.name}"
     end
   end
@@ -31,8 +31,8 @@ class FinancialCrashes::CLI
 
       if input.to_i > 0 && input.to_i <= FinancialCrashes::Crash.all.count
         the_crash = FinancialCrashes::Crash.all[input.to_i-1]
-        puts "The crash you have selected is #{the_crash.name}. Here is some more info about the crash you have selected :
-        #{the_crash.blurb}"
+        puts "The crash you have selected is #{the_crash.name}. Here is some more info about what you have selected :
+    #{the_crash.blurb}"
       elsif input == "crashes"
         list_crashes
       elsif input == 'exit'
