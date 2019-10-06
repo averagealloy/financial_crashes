@@ -39,6 +39,18 @@ attr_accessor :name, :blurb, :url
      crash_3.url = "https://www.thegentlemansjournal.com/five-worst-financial-crashes-time/"
 
 
+     crash_4 = self.new
+      crash_4.name = doc.css("div p strong").map {|title|title.text}[3]
+      crash_4.blurb = doc.css(".o-wrapper.o-wrapper--reading.o-wrapper--right p").map{|blurb| blurb.text}[8]
+     crash_4.url = "https://www.thegentlemansjournal.com/five-worst-financial-crashes-time/"
+
+     crash_5 = self.new
+      crash_5.name = doc.css("div p strong").map {|title|title.text}[4]
+      crash_5.blurb = doc.css(".o-wrapper.o-wrapper--reading.o-wrapper--right p").map{|blurb| blurb.text}[10]
+     crash_5.url = "https://www.thegentlemansjournal.com/five-worst-financial-crashes-time/"
+
+
+
      #binding.pry
      #
      # crash_2 = self.new
