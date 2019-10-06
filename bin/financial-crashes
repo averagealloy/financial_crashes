@@ -2,4 +2,4 @@
 
 require './lib/financial_crashes'
 
-FinancialCrashes::CLI.new.call
+CLI.new.call
