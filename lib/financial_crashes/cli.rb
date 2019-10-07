@@ -33,11 +33,12 @@ class CLI
         puts "The crash you have selected is #{the_crash.name}. Here is some more info about what you have selected :
         #{the_crash.blurb}"
         puts ""
-      elsif
+      elsif input == 'exit'
         puts ""
+      else
         puts "I can't find that crash."
         puts ""
-      else input == 'exit'
+
       end
     end
   end
