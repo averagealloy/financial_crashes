@@ -5,9 +5,9 @@ attr_accessor :name, :blurb, :url
     @@all << self
   end
 
-  def self.all
-    @@all
-  end
+   def self.all
+     @@all
+   end
 
   def self.now
     doc = Nokogiri::HTML(open("https://www.thegentlemansjournal.com/five-worst-financial-crashes-time/"))

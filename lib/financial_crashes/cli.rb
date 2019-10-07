@@ -22,7 +22,7 @@ class CLI
     input = nil
     while input != "exit"
       puts ""
-      puts "what would you like to learn about today?,to see the crashes again type list! or to leave the program type exit: "
+      puts "what would you like to learn about today?,to leave the program type exit: "
       puts ""
 
       input = gets.chomp
@@ -35,7 +35,7 @@ class CLI
         puts ""
       elsif
         puts ""
-        puts "I can't find that crash. try typing list to see the list of crashes again"
+        puts "I can't find that crash."
         puts ""
       else input == 'exit'
       end
