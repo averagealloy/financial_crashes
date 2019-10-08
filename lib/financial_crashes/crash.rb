@@ -39,7 +39,7 @@ attr_accessor :name, :blurb, :url
       crash_5.blurb = doc.css(".o-wrapper.o-wrapper--reading.o-wrapper--right p").map{|blurb| blurb.text}[10]
 
 
-    self.all
+      self.all
   end
 
 end
