@@ -1,5 +1,5 @@
 class Crash
-attr_accessor :name, :blurb, :url
+attr_accessor :name, :blurb
 @@all = []
   def initialize
     @@all << self
