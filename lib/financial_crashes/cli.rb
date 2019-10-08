@@ -1,5 +1,12 @@
 #controller
 class CLI
+  def initialize
+    @@crashes = Crash.now
+  end
+
+  def crashes
+    @@crashes
+  end
   def call
     list_crashes
     menu
@@ -10,8 +17,8 @@ class CLI
   def list_crashes
     puts "Welcome, History repeats itself so learn about Financial Nightmare's."
 
-    @crashes = Crash.now
-    @crashes.each.with_index(1) do |crash, i|
+
+    crashes.each.with_index(1) do |crash, i|
       puts ""
       puts "#{i}. #{crash.name}"
       puts ""
